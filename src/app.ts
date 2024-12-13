@@ -23,11 +23,11 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 // app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
+app.use(express.static(path.join(__dirname, '../../react/coolplanetfe/build')));
 
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
-
-
+app.use('/users/:id', usersRouter);
 
 app.listen(port, () => {
     console.log(`Server running at http://localhost:${port}`);

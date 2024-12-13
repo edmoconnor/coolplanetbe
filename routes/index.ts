@@ -5,8 +5,8 @@ const data = require('../users.json')
 
 /* GET home page. */
 router.get('/', (req: Request, res: Response) => {
-   res.json(data);
-   console.log(data)
+   res.send('coolplanet');
+   
 });
 
 module.exports = router;
