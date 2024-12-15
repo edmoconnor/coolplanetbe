@@ -4,7 +4,6 @@ const data = require('../users.json')
 
 /* GET users listing. */
 router.get('/', (req: Request, res: Response) => {
-  console.log('id')
   res.json(data);
 });
 
